@@ -13,6 +13,7 @@ tomcat_install 'helloworld' do
 end
 
 # Drop off our own server.xml that uses a non-default port setup
+
 cookbook_file '/opt/tomcat_helloworld/conf/server.xml' do
   source 'helloworld_server.xml'
   owner 'root'
@@ -20,6 +21,7 @@ cookbook_file '/opt/tomcat_helloworld/conf/server.xml' do
   mode '0644'
   notifies :restart, 'tomcat_service[helloworld]'
 end
+
 
 #remote_file '/opt/tomcat_helloworld/webapps/sample.war' do
 #  owner 'tomcat'
