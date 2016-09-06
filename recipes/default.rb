@@ -7,5 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
+puts 'this is the new Cookbook'
+
 include_recipe 'java'
 include_recipe 'bluekingapp::tomcat'
